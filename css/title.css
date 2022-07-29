@@ -1,0 +1,191 @@
+#title{
+    height: 100%;
+    min-height: 480px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+#title::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 75%;
+    height: 100%;
+    background-color: #000;
+}
+#title .inner{
+    width: 80%;
+    position: relative;
+    height: 673px;
+    z-index: 1;
+    color: #fff;
+}
+#title .inner h2{
+    font-size: 55px;
+    font-weight: 800;
+    position: relative;
+    z-index: 1;
+    line-height: 1.5;
+    overflow: hidden;
+    
+}
+#title .inner h2 span{
+    display: block;
+    animation-name: h2up;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+    animation-timing-function: ease-out;
+    animation-delay: 500ms;
+}
+@keyframes h2up {
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(100%);
+        opacity: 0.2;
+    }
+}
+#title .inner p{
+    position: relative;
+    z-index: 1;
+    font-size: 24px;
+    overflow: hidden;
+}
+#title .inner p span{
+    display: block;
+    animation-name: pup;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+    /* animation-delay: 1000ms; */
+    animation-timing-function: ease-out;
+    animation-delay: 500ms;
+}
+@keyframes pup {
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+}   
+
+#title .inner .video{
+    position: absolute;
+    width: 1188px;
+    height: 673px;
+    bottom: 0;
+    right: 0;
+}
+#title span.titleAside{
+    position: absolute;
+    /* width: 164px; */
+    transform: translateX(50%);
+    right: calc(20% / 4);/* calc(20% / 4 - 82px) */
+    bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 450px;
+    z-index: 2;
+}
+#title span.titleAside a.campaign{
+    font-size: 14px;
+    font-weight: 800;
+    color: #999;
+    transform: rotate(90deg) translateX(100px);
+    transition: color 500ms;
+}
+#title span.titleAside a.campaign:hover{
+    color: #000;
+}
+#title span.titleAside a.scroll{
+    color: #000;
+    font-size: 10px;
+    font-weight: 800;
+    position: relative;
+    animation-name: scrollColor;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes scrollColor {
+    0%{
+        color: #636a52;
+    }
+    20%{
+        color: #000;
+    }
+    100%{
+        color: #636a52;
+    }
+}
+
+#title span.titleAside a.scroll::before{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: -10px;
+    left: calc(50% - 5px);
+    display: block;
+    border: 1px solid #000;
+    border-top: transparent;
+    border-left: transparent;
+    transform: translateY(-15px) rotate(45deg);
+    animation-name: scrollArrow1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes scrollArrow1 {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+#title span.titleAside a.scroll::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: -20px;
+    left: calc(50% - 5px);
+    display: block;
+    border: 1px solid #333;
+    border-top: transparent;
+    border-left: transparent;
+    transform: translateY(-15px) rotate(45deg);
+    animation-name: scrollArrow2;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scrollArrow2 {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
