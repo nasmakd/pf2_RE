@@ -1,16 +1,17 @@
 header {
   position: fixed;
-  width: 100%;
+  width: 150px;
   z-index: 10;
+  height: 100%;
+  background-color: salmon;
 }
 header a{
   color: #fff;
 }
 header .inner {
-  width: 95%;
-  height: 100px;
+  width: 100%;
+  height: 100%;
   padding-top: 44px;
-  align-items: flex-end;
 }
 header .inner h1 {
   /*! position: absolute; */
@@ -44,7 +45,7 @@ header .inner h1 a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 28px;
+  font-size: 0;
   font-weight: 300;
 }
 header .inner h1 a img{
@@ -74,14 +75,17 @@ header .inner ul.gnb li ul.gnbsub li a {
   
 }
 header .inner ul.enb {
-  gap: 20px;
+  /* gap: 20px; */
   order: 3;
+  transform: translateY(-50px);
 }
 header .inner ul.enb li {
   
 }
 header .inner ul.enb li a {
+  display: block;
   color: black;
   font-weight: 600;
   font-size: 14px;
+  padding: 10px 5px;
 }
